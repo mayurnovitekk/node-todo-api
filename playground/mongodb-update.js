@@ -1,4 +1,3 @@
-// const MongoClient = require('mongodb').MongoClient;
 var {MongoClient, ObjectID} = require('mongodb');
 
 MongoClient.connect('mongodb://localhost:27017/TodosApp', (err, client) => {
@@ -18,13 +17,12 @@ MongoClient.connect('mongodb://localhost:27017/TodosApp', (err, client) => {
       name: 'John Was'
     },
     $inc: {
-      age: 3
+      age: 5
     }
   }, {
     returnOriginal: false
   }).then((result) => {
     console.log(result);
   });
-
   // client.close();
 });
